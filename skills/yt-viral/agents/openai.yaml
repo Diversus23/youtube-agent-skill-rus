@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Research (RU)"
+  short_description: "Compare videos against their channel medians"
+  default_prompt: "Use $yt-viral. Find patterns in my collection of Russian videos."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Chapters (RU)"
+  short_description: "Draft Russian chapters and validate timestamps"
+  default_prompt: "Use $yt-chapters. Create Russian YouTube chapters from my transcript."

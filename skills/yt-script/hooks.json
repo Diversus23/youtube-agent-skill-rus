@@ -1,0 +1,308 @@
+{
+  "version": "1.0-ru",
+  "note": "21 hook formulas with Russian illustrative examples and RU/EN lexical patterns. All examples are fictional templates, not evidence. Do not attribute their experience or figures to the author. Classification describes wording, not success. Russian scores are not calibrated on channel outcomes.",
+  "rules": [
+    "Match the title promise to the opening.",
+    "Choose one principal question or outcome.",
+    "Verify numbers, experience and sources; never invent evidence for a formula.",
+    "Show promised artifacts early enough for the format.",
+    "Adapt the opening to the genre and audience rather than enforcing one structure."
+  ],
+  "hooks": [
+    {
+      "id": "the-statistic",
+      "name": "The Statistic",
+      "shape": "In a sample with a named source, state a verified number and its implication.",
+      "example": "В тестовой выборке 6 из 10 кадров сняты против света. Покажу, как это исправить.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b\\d+(?:[.,]\\d+)?\\s?%",
+        "\\b\\d+ из \\d+\\b",
+        "\\b\\d+(\\.\\d+)?\\s?%",
+        "\\b\\d+ (out of|in) \\d+\\b",
+        "\\b\\d{2,}(,\\d{3})+\\b"
+      ]
+    },
+    {
+      "id": "someone-elses-result",
+      "name": "Someone Else's Result",
+      "shape": "Use a named creator and an observed result; distinguish correlation from cause.",
+      "example": "Этот канал заменил длинное вступление демонстрацией. Сравним два выпуска.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bэтот канал\\b",
+        "\\bвырос\\w* с .+ до\\b",
+        "\\bthis (channel|guy|creator|account)\\b",
+        "\\bwent from .* to\\b",
+        "\\bin (a|one|two|three|\\d+) (week|month|year)s?\\b"
+      ]
+    },
+    {
+      "id": "the-mistake",
+      "name": "The Mistake",
+      "shape": "Name a recognizable, checkable mistake without accusing the viewer.",
+      "example": "Вы настраиваете свет после камеры? Покажу, что из-за этого приходится переделывать.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bошиб\\w*\\b",
+        "\\bвы (все еще |всё ещё )?делаете\\b",
+        "\\byou('re| are) (probably |still )?(doing|making)\\b",
+        "\\bthe (mistake|reason) (everyone|most people|nobody)\\b",
+        "\\bstop (doing )?\\b"
+      ]
+    },
+    {
+      "id": "contrarian-flip",
+      "name": "Contrarian Flip",
+      "shape": "State common advice and demonstrate when it does not apply.",
+      "example": "Советуют начинать с дорогой камеры. Сравним её с телефоном при одинаковом свете.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bвсе (советуют|говорят|считают)\\b",
+        "\\bсоветуют\\b",
+        "\\bна самом деле\\b",
+        "\\beveryone (says|thinks|tells you)\\b",
+        "\\bis (actually )?wrong\\b",
+        "\\bnobody (tells|talks about)\\b"
+      ]
+    },
+    {
+      "id": "the-reveal",
+      "name": "The Reveal",
+      "shape": "Promise a specific demonstration and show it early.",
+      "example": "Сейчас покажу шаблон, по которому собираю сценарий.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b(сейчас )?покажу\\b",
+        "\\bна экране\\b",
+        "\\bI('m| am) going to show you\\b",
+        "\\bhere('s| is) (the|exactly)\\b",
+        "\\bon screen\\b"
+      ]
+    },
+    {
+      "id": "the-superlative",
+      "name": "The Superlative",
+      "shape": "Compare options on a named criterion; justify the superlative.",
+      "example": "Какой из этих трёх микрофонов лучше подавляет шум? Послушаем записи.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b(лучший|лучшая|самый быстрый|хуже всего)\\b",
+        "\\bthe (best|worst|fastest|easiest|only)\\b",
+        "\\bnumber one\\b"
+      ]
+    },
+    {
+      "id": "the-clock",
+      "name": "The Clock",
+      "shape": "Give a realistic time to a specific outcome, including prerequisites.",
+      "example": "За 5 минут настроим один источник света для интервью.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bза \\d+ (минут\\w*|секунд\\w*|час\\w*)\\b",
+        "\\bк концу (этого )?видео\\b",
+        "\\bin (the next )?\\d+ (seconds|minutes|hours)\\b",
+        "\\bby the end of this video\\b",
+        "\\bunder \\d+\\b"
+      ]
+    },
+    {
+      "id": "i-tried-it",
+      "name": "I Tried It",
+      "shape": "Describe an experiment the author actually performed, with its cost.",
+      "example": "Я неделю записывал звук на телефон. Вот где он справился, а где нет.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bя (проверил[а]?|попробовал[а]?|тестировал[а]?|неделю)\\b",
+        "\\bв течение \\d+ дней\\b",
+        "\\bI (tried|spent|tested|let|gave)\\b",
+        "\\bfor \\d+ (days|weeks|months)\\b",
+        "\\bso you don'?t have to\\b"
+      ]
+    },
+    {
+      "id": "the-question",
+      "name": "The Question",
+      "shape": "Answer a real viewer question, not an artificial mystery.",
+      "example": "Почему после экспорта звук становится тише?",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "^(почему|как|что|зачем|когда|можно ли)\\b",
+        "\\?\\s*$",
+        "^(why|how|what|when|should|can|do|does|is)\\b"
+      ]
+    },
+    {
+      "id": "the-before-after",
+      "name": "Before and After",
+      "shape": "Show two states under comparable conditions.",
+      "example": "Вот звук до обработки, а вот после. Сравните шум в паузах.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bдо\\b.*\\bпосле\\b",
+        "\\bраньше\\b.*\\bтеперь\\b",
+        "\\bbefore\\b.*\\bafter\\b",
+        "\\bthis was\\b.*\\bthis is\\b",
+        "\\bused to\\b"
+      ]
+    },
+    {
+      "id": "the-teardown",
+      "name": "The Teardown",
+      "shape": "Analyze a real example; do not generalize from one anecdote.",
+      "example": "Разберём эту сцену: почему предмет сразу заметен в кадре?",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b(разберем|разберём|разбор|проанализировал[а]?)\\b",
+        "\\b(broke|break|breaking) (it )?down\\b",
+        "\\bteardown\\b",
+        "\\banalys(ed|ed|is|e)\\b",
+        "\\bI pulled\\b"
+      ]
+    },
+    {
+      "id": "the-stack",
+      "name": "The Stack",
+      "shape": "Combine named tools only when both help produce the outcome.",
+      "example": "Таблица плюс таймер помогут распределить съёмки по доступным часам.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bплюс\\b",
+        "\\b(объединим|соединим|вместе)\\b",
+        "\\b\\w+ (plus|\\+) \\w+\\b",
+        "\\bcombine\\b",
+        "\\btogether\\b"
+      ]
+    },
+    {
+      "id": "the-warning",
+      "name": "The Warning",
+      "shape": "Name a real risk and a useful check without exaggerating fear.",
+      "example": "Перед съёмкой проверьте, пишет ли микрофон: индикатор камеры может вводить в заблуждение.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bперед (съемкой|съёмкой|публикацией)\\b",
+        "\\bне (публикуйте|удаляйте|начинайте)\\b",
+        "\\bdo not\\b",
+        "\\bdon'?t (upload|post|publish|start)\\b",
+        "\\bbefore you\\b",
+        "\\bstop\\b"
+      ]
+    },
+    {
+      "id": "the-list",
+      "name": "The List",
+      "shape": "Deliver the exact count of distinct useful items.",
+      "example": "3 способа смягчить свет без покупки новой лампы.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "^\\d+\\s+\\w+",
+        "\\b(три|пять|семь) (способ\\w*|ошиб\\w*|совет\\w*)\\b",
+        "^\\d+ \\w+",
+        "\\b(here are|these are) \\d+\\b"
+      ]
+    },
+    {
+      "id": "the-receipt",
+      "name": "The Receipt",
+      "shape": "Show a real artifact before explaining; hide private data.",
+      "example": "Вот исходная запись и обработанная версия. Теперь покажу настройки.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bвот (исходная|запись|результат|скриншот)\\b",
+        "\\bдоказательство\\b",
+        "\\bthis is (the|my)\\b",
+        "\\bscreenshot\\b",
+        "\\bproof\\b",
+        "\\breceipts?\\b"
+      ]
+    },
+    {
+      "id": "the-insider",
+      "name": "The Insider",
+      "shape": "Show a useful overlooked feature and verify the product version.",
+      "example": "В этой программе есть настройка, которая сохраняет расположение окон. Покажу, где она.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b(неочевидн\\w*|скрыт\\w*)\\b",
+        "\\bпокажу, где\\b",
+        "\\b(nobody|almost nobody|most people) (knows?|opens?|uses?)\\b",
+        "\\bhidden\\b",
+        "\\bburied\\b"
+      ]
+    },
+    {
+      "id": "the-impossible",
+      "name": "The Impossible Claim",
+      "shape": "Show an unexpected method and honestly state its prerequisites.",
+      "example": "Снимем предмет на белом фоне без студии — с окном и листом бумаги.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bбез (студии|камеры|монтажа|бюджета)\\b",
+        "\\bни одного\\b",
+        "\\bwithout\\b",
+        "\\bnever\\b",
+        "\\bin one\\b",
+        "\\bzero\\b"
+      ]
+    },
+    {
+      "id": "the-comparison",
+      "name": "The Comparison",
+      "shape": "Compare named options under equivalent conditions; a tie is valid.",
+      "example": "Петличка против микрофона камеры: сравним речь в шумной комнате.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b(против|сравним|сравнение|vs)\\b",
+        "\\bчто (лучше|выбрать)\\b",
+        "\\bvs\\.?\\b",
+        "\\bversus\\b",
+        "\\bwhich (one )?(is|wins)\\b",
+        "\\bsame .* (three|two) ways\\b"
+      ]
+    },
+    {
+      "id": "the-origin",
+      "name": "The Origin",
+      "shape": "Explain the origin of an idea in a way that serves the viewer.",
+      "example": "Этот выпуск начался с вопроса в комментариях. Вот что мы проверили.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\b(началось|начался|начинается)\\b",
+        "\\bистория создания\\b",
+        "\\bevery (video|post) .* starts\\b",
+        "\\bit all (starts|started)\\b",
+        "\\bthe (real )?reason\\b"
+      ]
+    },
+    {
+      "id": "the-deadline",
+      "name": "The Deadline",
+      "shape": "Use a deadline only with a verified primary source and date.",
+      "example": "С [подтверждённая дата] меняется [правило]. Разберём официальный документ.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "\\bс \\d{1,2} (января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\\b",
+        "\\bменяется\\b",
+        "\\b(this|next) (week|month|year)\\b",
+        "\\bis changing\\b",
+        "\\bno longer\\b",
+        "\\bas of\\b"
+      ]
+    },
+    {
+      "id": "the-direct-address",
+      "name": "The Direct Address",
+      "shape": "Address a specific viewer situation rather than everyone.",
+      "example": "Если вы снимаете дома вечером, начните с расположения лампы.",
+      "fails_when": "Fails when the promise is unsupported, misleading, or not delivered. Treat this example as illustrative, never as evidence about the author.",
+      "match": [
+        "^если (вы|ты)\\b",
+        "\\bдля тех, кто\\b",
+        "^if you\\b",
+        "\\bfor (anyone|everyone|people) who\\b",
+        "\\byou specifically\\b"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Voice Profile (RU)"
+  short_description: "Create or adapt a YouTube author voice profile"
+  default_prompt: "Use $yt-voice to build a Russian channel profile from my answers or existing author notes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Audit (RU)"
+  short_description: "Evidence-based channel review and next step"
+  default_prompt: "Use $yt-audit. Audit my YouTube channel using available evidence."

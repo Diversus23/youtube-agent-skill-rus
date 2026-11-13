@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Edit Notes (RU)"
+  short_description: "Find pauses and retakes in Russian transcripts"
+  default_prompt: "Use $yt-edit. Find candidate cuts in my Russian transcript."

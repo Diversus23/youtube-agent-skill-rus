@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Comments (RU)"
+  short_description: "Draft Russian replies in the creator voice"
+  default_prompt: "Use $yt-comment. Draft Russian replies to these comments without posting."

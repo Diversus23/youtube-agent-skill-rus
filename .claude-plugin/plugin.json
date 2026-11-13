@@ -1,0 +1,10 @@
+{
+  "name": "youtube-agent-rus",
+  "description": "Twelve YouTube skills with English agent instructions, Russian deliverables and Cyrillic-aware Node.js tools.",
+  "version": "2.0.0",
+  "author": { "name": "Barilko Vitaliy" },
+  "homepage": "https://github.com/Diversus23/youtube-agent-skill-rus",
+  "repository": "https://github.com/Diversus23/youtube-agent-skill-rus",
+  "license": "MIT",
+  "keywords": ["youtube", "russian", "scripts", "shorts", "retention", "seo"]
+}

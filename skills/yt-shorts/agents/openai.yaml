@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Shorts (RU)"
+  short_description: "Standalone Russian Shorts from longer videos"
+  default_prompt: "Use $yt-shorts. Find standalone Shorts in my Russian transcript."

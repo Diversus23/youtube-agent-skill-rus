@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Retention (RU)"
+  short_description: "Analyze retention data without causal guesses"
+  default_prompt: "Use $yt-retention. Analyze my retention table and propose one experiment."

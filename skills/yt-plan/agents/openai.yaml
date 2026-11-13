@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Planning (RU)"
+  short_description: "Plan uploads around real time and materials"
+  default_prompt: "Use $yt-plan. Plan a YouTube week within my available hours."

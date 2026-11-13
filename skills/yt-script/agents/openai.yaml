@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Scripts (RU)"
+  short_description: "Russian scripts, hooks and recording notes"
+  default_prompt: "Use $yt-script. Draft a Russian video script from my topic."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Packaging (RU)"
+  short_description: "Russian title and thumbnail pairs with checks"
+  default_prompt: "Use $yt-package. Suggest three Russian title and thumbnail pairs."

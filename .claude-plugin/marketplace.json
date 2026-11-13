@@ -1,0 +1,14 @@
+{
+  "name": "youtube-agent-skill-rus",
+  "description": "YouTube skill pack for Russian-speaking creators",
+  "owner": { "name": "Barilko Vitaliy" },
+  "plugins": [
+    {
+      "name": "youtube-agent-rus",
+      "description": "Twelve YouTube workflows with Russian output and local Node.js tools.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/Diversus23/youtube-agent-skill-rus"
+    }
+  ]
+}
